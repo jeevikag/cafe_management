@@ -1,12 +1,13 @@
+<div class="report-header">
 <p class = "reports-title">REPORTS</p>
 <div class = "reports-data">
   <%= form_with(url: "/reports",method: "get", local: "true") do %>
-    <p style="font-size:20px">Start Date: <%= date_field_tag("start_date")%>
-    End Date: <%= date_field_tag("end_date")%>
-    Customer Id: <%= number_field_tag("customer_id", nil , {min: 1, max: 1000,class: "reports-customer_id"})%></p>
+    <div class="report-header"><p>Start Date: <%= date_field_tag("start_date")%></p><br>
+    <p>End Date: <%= date_field_tag("end_date")%></p><br>
+    <p>Customer Id: <%= number_field_tag("customer_id", nil , {min: 1, max: 1000,class: "reports-customer_id"})%></p></div><br>
     <p class="search search1"><%= submit_tag("Search")%></p>
   <% end %>
-</div>
+</div></div>
 <% if orders %>
   <div class = "reports-data1">
     <p> Start Date: <%=start_date%> </p>

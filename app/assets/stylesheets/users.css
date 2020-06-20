@@ -37,3 +37,62 @@ height: 100%;
   background-position: center;
 
 }
+.wrapper {
+    margin: 0 auto;
+    width: 960px;
+}
+.user-list{
+  background-color: darkseagreen;
+  font-size: 25px;
+  float: left;
+  width: 33%;
+  margin-left: 50px;
+  padding-left: 50px;
+}
+.header-list{
+  font-style: italic;
+  text-align: center;
+  font-size: 50px;
+}
+.update-user{
+  text-align: center;
+  padding-top: 25px;
+}
+.name-input{
+  font-size: larger;
+  margin-bottom: 25px;
+}
+.email-input{
+  font-size: larger;
+  margin-bottom: 25px;
+}
+.phone-input{
+  font-size: larger;
+  margin-bottom: 25px;
+}
+.address-input{
+  font-size: larger;
+  margin-bottom: 25px;
+}
+.password-input{
+  font-size: larger;
+  margin-bottom: 25px;
+}
+.user-formsubmit{
+  background-color: #253a3a;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.user-formsubmit:hover {opacity: 1}
+.list-view{
+  text-align: center;
+}

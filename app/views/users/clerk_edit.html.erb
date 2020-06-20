@@ -1,0 +1,12 @@
+<%= form_with(url: "/users/#{user.id}/updateclerk", method: "put", class: "update-clerk") do %>
+  <div class="update-user">
+    <%= text_field_tag(:name, nil, class: "name-input", value: user.name, placeholder: "Enter the new name", autofocus: "autofocus") %>
+<br><%= email_field_tag(:email, nil, class: "email-input", value: user.email, placeholder: "Enter the new email", autofocus: "autofocus") %>
+<br> <%= text_field_tag(:phone, nil, class: "phone-input", value: user.phone, placeholder: "Enter the new Phone Number", autofocus: "autofocus") %>
+<br><%= text_field_tag(:address, nil, class: "address-input", value: user.address, placeholder: "Enter the new Address", autofocus: "autofocus") %>
+<br><%= password_field_tag(:password, nil, class: "password-input", value: user.password, placeholder: "Enter the new password", autofocus: "autofocus") %>
+  <br>
+  <%= submit_tag("Update Item!", class: "user-formsubmit") %>
+  </div>
+
+<% end %>

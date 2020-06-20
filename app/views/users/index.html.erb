@@ -1,0 +1,33 @@
+<h1 class="header-list">List of Users</h1>
+<div class="wrapper">
+  <div class="user-list">
+      <h3>List of Customers</h3>
+       <% User.all.each do |user| %>
+          <%if user.role == "customer" %>
+                 <p><%= user.name %> --- <%= user.role %></p>
+                  <ul>
+                   <li><%= form_with(url: "/users/#{user.id}/view", method: "get",local: "true") do %>
+                       <p class="user-formsubmit"><%= submit_tag("Complete Details")%></p>
+                       <% end %></li>
+                   </ul>
+          <% end %>
+       <% end %>
+  </div>
+  <div class="user-list">
+      <h3>List of Clerks</h3>
+       <% User.all.each do |user| %>
+          <%if user.role == "clerk" %>
+               <p><%= user.name %> --- <%= user.role %>
+               <ul>
+                  <li><%= form_with(url: "/users/#{user.id}/view", method: "get",local: "true") do %>
+                       <p class="user-formsubmit"><%= submit_tag("Complete Details")%></p>
+                  <% end %></li>
+                  <li><%= form_with(url: "/users/#{user.id}/edit", method: "get",local: "true") do %>
+                    <p>Edit <%= user.name %>:<%= image_submit_tag("edit.svg", class: "clerk-edit" )%></p>
+                  <% end %></li>
+                </ul>
+               </p>
+          <% end %>
+       <% end %>
+  </div>
+</div>

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   put "menuitems/:id/updateMenuItem" => "menuitems#updateMenuItem"
+  put "users/:id/updateclerk" => "users#updateclerk"
   get "/homepage", to: "homepage#index", as: :homepage
   get "/menuitems", to: "menuitems#index", as: :new_menuitems
   post "/menuitems", to: "menuitems#create"
@@ -17,6 +18,9 @@ Rails.application.routes.draw do
   get "/orders", to: "orders#index"
   get "/reports" => "reports#index", as: :reports
   get "/reports/:id" => "reports#invoice", as: :invoice
+  get "/clerks" => "clerks#new", as: :new_clerks
+  get "/users/index" => "users#index", as: :users_list
+  get "/users/:id/view" => "users#view"
   #get "/menuitems/cart", to: "menuitems#cart", as: :new_cartitems
   #post "/menuitems/cart", to: "menuitems#new", as: :cartitems
   delete "/exit" => "menusessions#destroy", as: :destroy_menusession

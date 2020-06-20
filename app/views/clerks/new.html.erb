@@ -3,7 +3,7 @@
 
 <section class="UsersNew">
   <%= form_with url: users_path do |form| %>
-   <p style="color:red;">*note: Please type your role as "customer" to sign-up</p>
+   <p style="color:red;">*note:Type  role as clerk to Create</p>
     <div class="Form-Section">
       <p class="FormInput-label">Role: </p>
       <%= form.text_field :role, class: "Form-Input"%>
@@ -30,7 +30,7 @@
       <%= form.password_field :password, class:"Form-Input" %>
     </div>
     <div class="Form-Section">
-      <%= form.submit "Sign-up!", class: "FormSubmit"%>
+      <%= form.submit "Create!", class: "FormSubmit"%>
     </div>
   <% end%>
 </section>
