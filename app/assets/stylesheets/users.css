@@ -96,3 +96,11 @@ height: 100%;
 .list-view{
   text-align: center;
 }
+.clerk-delete{
+  width: 30px;
+  display: flex;
+}
+.list-view{
+ font-size: 20px;
+ font-style: italic;
+}

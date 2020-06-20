@@ -4,4 +4,14 @@
 <p class="email-input">Email: <%= user.email %></p><br>
 <p class="phone-input">Phone Number: <%= user.phone %></p><br>
 <p class="address-input">Address: <%= user.address %></p><br>
+<% if user.role == "customer" %>
+  <% count = 0 %>
+   <% Order.all.each do |order| %>
+      <% if order.user_id == user.id %>
+          <% count+=1 %>
+      <% end %>
+  <% end %>
+  <p>Order's Count: <%= count %></p>
+<% end %>
+
 </section>

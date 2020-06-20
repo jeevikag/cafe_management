@@ -23,7 +23,10 @@
                        <p class="user-formsubmit"><%= submit_tag("Complete Details")%></p>
                   <% end %></li>
                   <li><%= form_with(url: "/users/#{user.id}/edit", method: "get",local: "true") do %>
-                    <p>Edit <%= user.name %>:<%= image_submit_tag("edit.svg", class: "clerk-edit" )%></p>
+                    <p>Edit <%= user.name %>: <%= image_submit_tag("edit.svg", class: "clerk-edit" )%></p>
+                  <% end %></li>
+                  <li><%= form_with(url: "/users/#{user.id}/delete", method: "delete",local: "true") do %>
+                    <p>Delete <%= user.name %>: <%= image_submit_tag("trash.svg", class: "clerk-delete" )%></p>
                   <% end %></li>
                 </ul>
                </p>

@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get "/clerks" => "clerks#new", as: :new_clerks
   get "/users/index" => "users#index", as: :users_list
   get "/users/:id/view" => "users#view"
+  delete "/users/:id/delete" => "users#delete"
   #get "/menuitems/cart", to: "menuitems#cart", as: :new_cartitems
   #post "/menuitems/cart", to: "menuitems#new", as: :cartitems
   delete "/exit" => "menusessions#destroy", as: :destroy_menusession

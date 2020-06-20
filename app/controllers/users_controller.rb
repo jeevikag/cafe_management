@@ -14,6 +14,8 @@ class UsersController < ApplicationController
       password: params[:password],
       role: params[:role],
     )
+    new_user.save
+    new_user.user_id = new_user.id
     if new_user.save
       if new_user.role == "clerk"
         redirect_to new_clerks_path
@@ -51,6 +53,13 @@ class UsersController < ApplicationController
     id = params[:id]
     user = User.find(id)
     render "user_view", locals: { user: user }
+  end
+
+  def delete
+    id = params[:id]
+    user = User.all.find(id)
+    user.destroy
+    redirect_to users_list_path
   end
 
   def destroy
