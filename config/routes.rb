@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  put "menuitems/:id/updateMenuItem" => "menuitems#updateMenuItem"
   get "/homepage", to: "homepage#index", as: :homepage
   get "/menuitems", to: "menuitems#index", as: :new_menuitems
   post "/menuitems", to: "menuitems#create"

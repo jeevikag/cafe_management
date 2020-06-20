@@ -1,0 +1,40 @@
+.MenuItem-edit{
+    padding-left: 20px;
+    padding-top: 5px;
+}
+.update-menuitem-main{
+  text-align: center;
+  padding-top: 50px;
+  background-color: bisque;
+  font-size: xx-large;
+}
+.update-menuitem-subblock{
+  font-size: large;
+  padding-bottom: 20px;
+}
+.menus-dropdown{
+font-size: large;
+background-color: darkgray;
+}
+.text-input{
+font-size: large;
+background-color: darkgrey;
+}
+.update-menuitem-remblock{
+   font-size: large;
+   padding-top: 25px;
+}
+.menuitem-textarea{
+  font-size: larger;
+  background-color: darkgray;
+}
+.menuitem-forminput{
+  font-size: larger;
+  background-color: darkgray;
+  margin-top: 25px;
+}
+.menuitem-formsubmit{
+  margin-top: 28px;
+  font-size: 30px;
+  background-color: darkgray;
+}

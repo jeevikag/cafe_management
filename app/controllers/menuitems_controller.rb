@@ -33,6 +33,13 @@ class MenuitemsController < ApplicationController
     end
   end
 
+  def edit
+    id = params[:id]
+    menuitem = Menuitem.find(id)
+    menus = Menu.displayable
+    render "menu_item_edit", locals: { menuitem: menuitem, menus: menus }
+  end
+
   def update
     id = params[:id]
     name = params[:name]
@@ -40,6 +47,18 @@ class MenuitemsController < ApplicationController
     menuitem.name = name
     menuitem.save
     redirect_to menuitems_path
+  end
+
+  def updateMenuItem
+    id = params[:id]
+    menuitem = Menuitem.find(id)
+    menuitem.name = params[:name]
+    menuitem.description = params[:description]
+    menuitem.price = params[:price]
+    menuitem.menu_id = params[:menu_id]
+    menuitem.save
+    flash[:notice] = "updated successfully"
+    redirect_to "/menus/#{menuitem.menu_id}"
   end
 
   def destroy
