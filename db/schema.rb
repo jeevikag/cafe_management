@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 2020_05_28_120624) do
     t.integer "menuitem_id"
     t.string "name"
     t.text "description"
-    t.integer "user_id"
-    t.integer "menu_id"
+    t.bigint "user_id"
+    t.bigint "menu_id"
     t.float "price"
     t.boolean "active"
     t.integer "quantity"
@@ -48,13 +48,6 @@ ActiveRecord::Schema.define(version: 2020_05_28_120624) do
     t.integer "price"
   end
 
-  create_table "todos", force: :cascade do |t|
-    t.text "todo_text"
-    t.date "due_date"
-    t.boolean "completed"
-    t.bigint "user_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -65,7 +58,6 @@ ActiveRecord::Schema.define(version: 2020_05_28_120624) do
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "cart"
   end
 
 end
