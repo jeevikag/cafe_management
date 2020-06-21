@@ -7,7 +7,7 @@
 <% if user.role == "customer" %>
   <% count = 0 %>
    <% Order.all.each do |order| %>
-      <% if order.user_id == 1 && order.price != nil %>
+      <% if order.user_id == user.id && order.price != nil %>
           <% count=count+1 %>
       <% end %>
   <% end %>
