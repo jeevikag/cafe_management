@@ -1,8 +1,6 @@
 Rails.application.configure do
-  config.cache_classes = true
-  config.serve_static_assets = false
-  config.assets.compile = false
-  config.assets.digest = true
+  config.serve_static_assets = true
+  config.assets.compile = true
 
   # Settings specified here will take precedence over those in config/application.rb.
 
