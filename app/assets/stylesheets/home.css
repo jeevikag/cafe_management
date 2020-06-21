@@ -9,7 +9,7 @@
 
 }
 .bg{
-  background-image: image-url("foodmenu.jpg");
+  background-image: url("images/foodmenu.jpg");
   background-color: #cccccc;
   height: 500px;
   background-position: fixed;
