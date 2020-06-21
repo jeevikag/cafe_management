@@ -1,5 +1,5 @@
 class ClerksController < ApplicationController
   def new
-    render "/users/new"
+    render "new"
   end
 end

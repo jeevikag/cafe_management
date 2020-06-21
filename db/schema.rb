@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2020_05_28_120624) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "menuitems", force: :cascade do |t|
     t.integer "menuitem_id"
     t.string "name"
@@ -43,6 +46,13 @@ ActiveRecord::Schema.define(version: 2020_05_28_120624) do
     t.boolean "success"
     t.string "status"
     t.integer "price"
+  end
+
+  create_table "todos", force: :cascade do |t|
+    t.text "todo_text"
+    t.date "due_date"
+    t.boolean "completed"
+    t.bigint "user_id"
   end
 
   create_table "users", force: :cascade do |t|
