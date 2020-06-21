@@ -11,7 +11,7 @@
 
   <body>
   <% if @current_user %>
-    <p class="UserHeader" ><%= image_tag "restaurant.png"%>Welcome <%= @current_user.role %>-<%= @current_user.name %>!
+    <p class="UserHeader" >Welcome <%= @current_user.role %>-<%= @current_user.name %>!
     <%= link_to "Sign Out", destroy_session_path, method: "delete" %>
     </p>
 
